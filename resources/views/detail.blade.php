@@ -51,15 +51,15 @@
 </header>
 
 
-<!-- Main Content -->
+
 <main class="px-4 md:px-16 py-6 flex flex-col md:flex-row gap-8">
-    <!-- Product Images -->
+  
     <div class="flex flex-col md:w-1/2 gap-4">
         <div class="flex flex-col gap-2">
-            <!-- Main Image -->
+     
             <img id="main-image" src="img/oang-2.jpg" alt="T-shirt" class="w-full h-auto rounded-lg border">
 
-            <!-- Thumbnails -->
+         
             <div class="flex gap-2">
                 <img class="thumbnail w-20 h-20 rounded-lg border cursor-pointer hover:opacity-80" src="img/orang-1.jpg" alt="T-shirt">
                 <img class="thumbnail w-20 h-20 rounded-lg border cursor-pointer hover:opacity-80" src="img/orang-3.jpg" alt="T-shirt">
@@ -68,7 +68,6 @@
         </div>
     </div>
 
-    <!-- Right: Product Details -->
     <div class="md:w-1/2 flex flex-col gap-4">
         <h1 class="text-3xl font-bold">LAPTOP ASUS TUF GAMING F15</h1>
         <div class="flex items-center gap-2">
