@@ -36,5 +36,6 @@ cd elektronik-gaming
 ```
 
 ### 2. Install Dependiences
+```bash
 composer install
 npm install
