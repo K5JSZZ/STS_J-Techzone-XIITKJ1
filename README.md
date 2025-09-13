@@ -1,3 +1,7 @@
+git clone https://github.com/username/nama-repo.git
+cd nama-repo
+
+
 🖥️ Web Elektronik Gaming
 
 Aplikasi web yang menyediakan berbagai perangkat elektronik gaming seperti laptop gaming, headset, handphone, PC build, network equipment dan lain sebagainya.
