@@ -84,3 +84,35 @@ php artisan serve
 ├── database/           # Migrasi & seeder
 ├── .env.example        # File konfigurasi environment
 └── README.md           # Dokumentasi proyek
+
+```
+
+## 🔑 OTP Verification Flow
+```bash
+sequenceDiagram
+    User->>Website: Login / Register
+    Website->>PHPMailer: Kirim kode OTP ke email
+    User->>Website: Input kode OTP
+    Website->>Database: Validasi OTP
+    Database-->>Website: Status Validasi
+    Website-->>User: Akses diberikan / ditolak
+
+```
+
+👥 Contributors
+This is my Team Project to make website electronic gaming :
+
+Jason sairyo
+ – Backend & Frontend Developer
+
+Marco Marchelino
+ –  UI/UX Designer
+
+Helen Giovana
+ –  UI/UX Designer
+
+---
+
+📌 Contact & Support
+Email: fldelve89@gmail.com
+Website: brilian.com (not hosted yet)
