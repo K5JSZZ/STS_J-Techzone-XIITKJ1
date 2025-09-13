@@ -101,7 +101,7 @@ sequenceDiagram
 
 --- 
 
-👥 Contributors
+# 👥 Contributors
 This is my Team Project to make website electronic gaming :
 
 Jason sairyo
@@ -115,6 +115,6 @@ Helen Giovana
 
 ---
 
-📌 Contact & Support
-Email: mailleegaming888@gmail.com
-Website: jtechzone (not hosted yet)
+# 📌 Contact & Support
+- Email: mailleegaming888@gmail.com
+- Website: jtechzone (not hosted yet)
