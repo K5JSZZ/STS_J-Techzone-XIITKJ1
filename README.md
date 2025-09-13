@@ -7,12 +7,12 @@ Website ini dirancang untuk memberikan pengalaman belanja online yang **aman, re
 
 ## ✨ Fitur Utama  
 
-- OTP Verification – Keamanan login dengan kode verifikasi email menggunakan **PHPMailer**.  
-- Dark Mode & Light Mode– Tampilan tema dapat diganti sesuai preferensi pengguna.  
-- Mobile Friendly – Desain sepenuhnya responsif dengan **Tailwind CSS**.  
-- Kategori Produk – Laptop Gaming, PC Build, Handphone, Headset, Network dan lainnya.  
-- Halaman Produk Detail – Informasi lengkap setiap produk, termasuk spesifikasi dan gambar.  
-- Voucher Promo – Pengguna bisa menggunakan voucher promo saat checkout.  
+- 🔐 **OTP Verification** – Keamanan login dengan kode verifikasi email menggunakan **PHPMailer**.  
+- 🌓 **Dark Mode & Light Mode** – Tampilan tema dapat diganti sesuai preferensi pengguna.  
+- 📱 **Mobile Friendly** – Desain sepenuhnya responsif dengan **Tailwind CSS**.  
+- 🗂️ **Kategori Produk** – Laptop Gaming, PC Build, Handphone, Headset, Network dan lainnya.  
+- 🛒 **Halaman Produk Detail** – Informasi lengkap setiap produk, termasuk spesifikasi dan gambar.  
+- 🎟️ **Voucher Promo** – Pengguna bisa menggunakan voucher promo saat checkout.  
 
 ---
 
@@ -24,16 +24,7 @@ Website ini dirancang untuk memberikan pengalaman belanja online yang **aman, re
 - **PHPMailer** – Mengirim kode OTP melalui email.  
 - **GitHub** – Version control & kolaborasi tim.  
 
-⚙️ Konfigurasi Database
-
-Edit file .env dan sesuaikan dengan konfigurasi MySQL Anda:
-
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=elektronik_gaming
-DB_USERNAME=root
-DB_PASSWORD=
+---
 
 ## 📂 Struktur Proyek  
 
@@ -46,49 +37,29 @@ DB_PASSWORD=
 ├── .env.example        # File konfigurasi environment
 └── README.md           # Dokumentasi proyek
 
-# 1. Clone repository
-git clone https://github.com/username/nama-repo.git
-cd nama-repo
 
-# 2. Install dependency Laravel
+## 🚀 Langkah Instalasi
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/your-username/elektronik-gaming.git
+cd elektronik-gaming
+
+
+## Install Deependenies
 composer install
-npm install && npm run dev
+npm install
 
-# 3. Copy .env dan konfigurasi database
+## Setup Environment
 cp .env.example .env
 php artisan key:generate
 
-# 4. Migrasi database
-php artisan migrate --seed
+## Konfigurasi Database
+Edit file .env dan sesuaikan konfigurasi database:
 
-# 5. Jalankan server
-php artisan serve
-
-sequenceDiagram
-    User->>Website: Login / Register
-    Website->>PHPMailer: Kirim kode OTP ke email
-    User->>Website: Input kode OTP
-    Website->>Database: Validasi OTP
-    Database-->>Website: Status Validasi
-    Website-->>User: Akses diberikan / ditolak
-
-📱 Tampilan
-
-Dark Mode / Light Mode Toggle
-
-Halaman Kategori Produk
-
-Detail Produk dengan tombol Add to Cart & Wishlist
-
-Form Login dengan OTP Verification
-
-
-# 1. Fork repository ini
-# 2. Buat branch baru
-git checkout -b fitur-baru
-
-# 3. Commit perubahan
-git commit -m "Menambahkan fitur baru"
-
-# 4. Push ke branch
-git push origin fitur-baru
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=elektronik_gaming
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
