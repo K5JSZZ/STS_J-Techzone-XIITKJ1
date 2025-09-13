@@ -7,12 +7,12 @@ Website ini dirancang untuk memberikan pengalaman belanja online yang **aman, re
 
 ## ✨ Fitur Utama  
 
-- 🔐 **OTP Verification** – Keamanan login dengan kode verifikasi email menggunakan **PHPMailer**.  
-- 🌓 **Dark Mode & Light Mode** – Tampilan tema dapat diganti sesuai preferensi pengguna.  
-- 📱 **Mobile Friendly** – Desain sepenuhnya responsif dengan **Tailwind CSS**.  
-- 🗂️ **Kategori Produk** – Laptop Gaming, PC Build, Handphone, Headset, Network dan lainnya.  
-- 🛒 **Halaman Produk Detail** – Informasi lengkap setiap produk, termasuk spesifikasi dan gambar.  
-- 🎟️ **Voucher Promo** – Pengguna bisa menggunakan voucher promo saat checkout.  
+- OTP Verification – Keamanan login dengan kode verifikasi email menggunakan **PHPMailer**.  
+- Dark Mode & Light Mode– Tampilan tema dapat diganti sesuai preferensi pengguna.  
+- Mobile Friendly – Desain sepenuhnya responsif dengan **Tailwind CSS**.  
+- Kategori Produk – Laptop Gaming, PC Build, Handphone, Headset, Network dan lainnya.  
+- Halaman Produk Detail – Informasi lengkap setiap produk, termasuk spesifikasi dan gambar.  
+- Voucher Promo – Pengguna bisa menggunakan voucher promo saat checkout.  
 
 ---
 
@@ -24,7 +24,16 @@ Website ini dirancang untuk memberikan pengalaman belanja online yang **aman, re
 - **PHPMailer** – Mengirim kode OTP melalui email.  
 - **GitHub** – Version control & kolaborasi tim.  
 
----
+⚙️ Konfigurasi Database
+
+Edit file .env dan sesuaikan dengan konfigurasi MySQL Anda:
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=elektronik_gaming
+DB_USERNAME=root
+DB_PASSWORD=
 
 ## 📂 Struktur Proyek  
 
