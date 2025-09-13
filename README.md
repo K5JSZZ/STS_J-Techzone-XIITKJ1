@@ -24,18 +24,7 @@ Website ini dirancang untuk memberikan pengalaman belanja online yang **aman, re
 - **PHPMailer** – Mengirim kode OTP melalui email.  
 - **GitHub** – Version control & kolaborasi tim.  
 
----
 
-## 📂 Struktur Proyek  
-
-```bash
-├── app/                # Logic utama Laravel
-├── public/             # Aset publik (gambar, css, js)
-├── resources/          # Blade templates & Tailwind CSS
-├── routes/             # Routing aplikasi
-├── database/           # Migrasi & seeder
-├── .env.example        # File konfigurasi environment
-└── README.md           # Dokumentasi proyek
 
 ## 🚀 Langkah Instalasi
 
