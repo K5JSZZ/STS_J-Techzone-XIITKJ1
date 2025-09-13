@@ -30,8 +30,8 @@ Website ini dirancang untuk memberikan pengalaman belanja online yang **aman, re
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/your-username/elektronik-gaming.git
-cd elektronik-gaming
+git clone https://github.com/your-username/J-techzone.git
+cd J-techzone
 
 ```
 
@@ -39,3 +39,48 @@ cd elektronik-gaming
 ```bash
 composer install
 npm install
+
+```
+
+### 3. Setup Environment
+```bash
+cp .env.example .env
+php artisan key:generate
+
+```
+
+### 4. Konfigurasi Database
+Edit file .env dan sesuaikan konfigurasi database:
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=J-techzone
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+
+```
+
+### 5. Migrasi Database
+```bash
+php artisan migrate --seed
+
+```
+
+### 6. Jalakankan server
+```bash
+php artisan serve
+
+
+```
+
+## 📂 Struktur Proyek  
+
+```bash
+├── app/                # Logic utama Laravel
+├── public/             # Aset publik (gambar, css, js)
+├── resources/          # Blade templates & Tailwind CSS
+├── routes/             # Routing aplikasi
+├── database/           # Migrasi & seeder
+├── .env.example        # File konfigurasi environment
+└── README.md           # Dokumentasi proyek
