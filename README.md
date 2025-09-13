@@ -33,6 +33,8 @@ Website ini dirancang untuk memberikan pengalaman belanja online yang **aman, re
 git clone https://github.com/your-username/elektronik-gaming.git
 cd elektronik-gaming
 
+```
+
 ### 2. Install Dependiences
 composer install
 npm install
