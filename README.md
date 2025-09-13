@@ -37,7 +37,6 @@ Website ini dirancang untuk memberikan pengalaman belanja online yang **aman, re
 ├── .env.example        # File konfigurasi environment
 └── README.md           # Dokumentasi proyek
 
-
 ## 🚀 Langkah Instalasi
 
 ### 1. Clone Repository
@@ -45,21 +44,3 @@ Website ini dirancang untuk memberikan pengalaman belanja online yang **aman, re
 git clone https://github.com/your-username/elektronik-gaming.git
 cd elektronik-gaming
 
-
-## Install Deependenies
-composer install
-npm install
-
-## Setup Environment
-cp .env.example .env
-php artisan key:generate
-
-## Konfigurasi Database
-Edit file .env dan sesuaikan konfigurasi database:
-
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=elektronik_gaming
-DB_USERNAME=your_username
-DB_PASSWORD=your_password
