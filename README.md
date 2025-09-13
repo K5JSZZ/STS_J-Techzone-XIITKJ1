@@ -99,6 +99,8 @@ sequenceDiagram
 
 ```
 
+--- 
+
 👥 Contributors
 This is my Team Project to make website electronic gaming :
 
@@ -114,5 +116,5 @@ Helen Giovana
 ---
 
 📌 Contact & Support
-Email: fldelve89@gmail.com
-Website: brilian.com (not hosted yet)
+Email: mailleegaming888@gmail.com
+Website: jtechzone (not hosted yet)
