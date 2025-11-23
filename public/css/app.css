@@ -1,0 +1,99 @@
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.card-images {
+    position: relative;
+    flex: 0.5;
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: flex 0.5s ease;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-images::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+
+.card-images::after {
+    content: attr(data-name);
+    position: absolute;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 4px;
+    bottom: 10px;
+    left: 10px;
+    text-transform: uppercase;
+}
+
+.card-images h2::after {
+    display:none;
+}
+
+.card-images.active {
+    flex: 3;
+}
+
+.card-images.active::before {
+    opacity: 1;
+}
+
+.info {
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 2;
+}
+
+.card-images.active .info {
+    opacity: 1;
+}
+
+.info h2 {
+    font-size: 28px;
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.info p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+}

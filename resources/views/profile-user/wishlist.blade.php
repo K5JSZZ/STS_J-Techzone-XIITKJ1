@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Information</title>
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+
+        /* Optional: scrollbar ungu yang halus */
+        .custom-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background-color: #7e22ce; /* ungu */
+            border-radius: 10px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-gray-800 text-white min-h-screen flex items-center justify-center">
+
+<div class="w-full max-w-6xl mx-auto flex flex-col md:flex-row gap-4 p-4 h-[90vh]">
+
+    <!-- Left Section (Sidebar, tinggi sama dengan kanan) -->
+    <div class="flex flex-col gap-4 w-full md:w-1/4 h-full">
+
+        <!-- Profile Box -->
+        <div class="bg-gradient-to-b from-[#2a2836] to-[#1c1a25] rounded-lg flex flex-col items-center text-center py-6 shadow-md">
+            <div class="w-20 h-20 bg-gray-700 rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12c2.67 0 8 1.34 8 4v4H4v-4c0-2.66 5.33-4 8-4zm0-2a4 4 0 110-8 4 4 0 010 8z"/>
+                </svg>
+            </div>
+            <button class="text-purple-400 text-sm mt-2 hover:underline">Change Pictures</button>
+            <p class="mt-2 font-semibold">{{ auth()->user()->name }}</p>
+        </div>
+
+        <!-- Sidebar Menu Box -->
+        <div class="bg-gradient-to-b from-[#2a2836] to-[#1c1a25] rounded-lg p-5 flex flex-col justify-between shadow-md flex-1">
+            <nav class="space-y-3 text-sm">
+                <a href="{{route('profile-user.profile')}}" class="flex items-center gap-4 hover:text-purple-400 px-3 py-2 rounded-md">
+                    <i class='bxr  bx-user-circle'  ></i>  Personal Information
+                </a>
+                <a href="#" class="flex items-center bg-gradient-to-r from-gray-700/40 to-gray-700/10 rounded-md px-3 py-2 border-l-2 border-purple-400 text-purple-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9 9 0 1112 21a9.002 9.002 0 01-6.879-3.196z" />
+                    </svg>
+                    Wishlist
+                </a>
+                <a href="{{route('profile-user.cart')}}" class="flex items-center gap-4 hover:text-purple-400 px-3 py-2 rounded-md">
+                    <i class='bxr  bx-cart'  ></i>  Cart
+                </a>
+                <a href="{{route('profile-user.history')}}" class="flex items-center gap-4 hover:text-purple-400 px-3 py-2 rounded-md">
+                    <i class='bxr  bx-history'  ></i> Purchase History
+                </a>
+                <a href="{{route('profile-user.address')}}" class="flex items-center gap-4 hover:text-purple-400 px-3 py-2 rounded-md">
+                    <i class='bxr  bx-location'  ></i>  Address
+                </a>
+                <a href="{{route('profile-user.payment')}}" class="flex items-center gap-4 hover:text-purple-400 px-3 py-2 rounded-md">
+                    <i class='bxr  bx-wallet-alt'  ></i>  Payment Methods
+                </a>
+                <a href="{{route('profile-user.help')}}" class="flex items-center gap-4 hover:text-purple-400 px-3 py-2 rounded-md">
+                    <i class='bxr  bx-info-circle'  ></i>  Help
+                </a>
+
+
+            </nav>
+
+            <a href="{{ route('logout') }}" class="mt-6 bg-purple-600 text-center hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm font-medium">Sign Out</a>
+        </div>
+    </div>
+
+    <!-- Right Section (Main Content Scrollable, sama tinggi dengan sidebar) -->
+    <div class="flex-1 bg-[#0f0f1a] p-8 rounded-2xl overflow-y-auto custom-scroll h-full">
+        <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+            <h1 class="text-4xl font-semibold">Wishlist</h1>
+            <div class="flex items-center bg-purple-900/50 px-4 py-2 rounded-full mt-4 md:mt-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-300 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input type="text" placeholder="Search" class="bg-transparent focus:outline-none text-white w-40 md:w-60" />
+            </div>
+        </div>
+
+        <!-- Wishlist Items -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <?php foreach ($products as $product): ?>
+            <div class="bg-gray-800 rounded-2xl shadow-lg flex flex-col overflow-hidden">
+                <div class="w-full h-48 md:h-60 lg:h-64">
+                    <img src="/<?= $product['image']; ?>" alt="<?= $product['name']; ?>" class="w-full h-full object-cover">
+                </div>
+
+                <div class="p-4 flex flex-col flex-1 gap-2">
+                    <div class="flex justify-between items-start">
+                        <h2 class="font-semibold text-lg text-white leading-tight"><?= $product['name']; ?></h2>
+                        <button class="text-gray-400 hover:text-pink-500 mt-1">
+                            <i class='text-2xl bx bx-heart'></i>
+                        </button>
+                    </div>
+
+                    <p class="text-gray-300 mb-4">Rp <?= number_format($product['price'], 0, ',', '.'); ?></p>
+
+                    <button class="mt-auto bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded-lg font-medium">
+                        Add To Cart
+                    </button>
+                </div>
+            </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
